@@ -263,7 +263,7 @@ export default async function Home() {
             Top Trending Personality Shows
           </h1>
           <div className="flex flex-wrap -m-4">
-            {trendingPersonRes.results.slice(4, 8).map((data) => {
+            {trendingPersonRes.results.slice(8, 12).map((data) => {
               return (
                 <MovieCard
                   key={data.id}

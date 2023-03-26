@@ -21,7 +21,7 @@ export default function MovieCard({
         {image == null ? (
           <Image
             alt={`${name} Image not Found`}
-            className=" w-full lg:h-auto h-64 object-cover object-center rounded"
+            className=" w-full object-cover object-center rounded"
             width={700}
             height={700}
             src={imagePath + backdropImage}
@@ -29,7 +29,7 @@ export default function MovieCard({
         ) : (
           <Image
             alt={`${name} Image not Found`}
-            className=" w-full lg:h-auto h-64 object-cover object-center rounded"
+            className=" w-full object-cover object-center rounded"
             width={700}
             height={700}
             src={imagePath + image}

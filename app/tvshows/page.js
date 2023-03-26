@@ -1,11 +1,14 @@
 import MovieCard from "../MovieCard";
 
 export default async function TvShows() {
+  const pageNumber = 1;
+  // for (let pageNumber = 1; pageNumber < 10; pageNumber++) {
+  //   return console.log(pageNumber);
+  // }
   const tvData = await fetch(
-    "https://api.themoviedb.org/3/tv/popular?api_key=9f0d60fb73ce2b261485d824070652f5"
+    `https://api.themoviedb.org/3/tv/popular?api_key=9f0d60fb73ce2b261485d824070652f5&page=${pageNumber}`
   );
   const tvRes = await tvData.json();
-  console.log(tvRes);
   return (
     <div>
       <section className="text-gray-400 bg-black body-font">
