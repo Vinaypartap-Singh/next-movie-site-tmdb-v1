@@ -9,6 +9,7 @@ export default function MovieCard({
   id,
   firstAirDate,
   name,
+  backdropImage,
 }) {
   const imagePath = "https://image.tmdb.org/t/p/original";
   return (
@@ -17,13 +18,23 @@ export default function MovieCard({
         href={`/${id}`}
         className="block relative h-48 rounded overflow-hidden"
       >
-        <Image
-          alt="ecommerce"
-          className="object-cover object-center w-full h-full block"
-          width={100}
-          height={100}
-          src={imagePath + image}
-        />
+        {image == null ? (
+          <Image
+            alt={`${name} Image not Found`}
+            className=" w-full lg:h-auto h-64 object-cover object-center rounded"
+            width={700}
+            height={700}
+            src={imagePath + backdropImage}
+          />
+        ) : (
+          <Image
+            alt={`${name} Image not Found`}
+            className=" w-full lg:h-auto h-64 object-cover object-center rounded"
+            width={700}
+            height={700}
+            src={imagePath + image}
+          />
+        )}
       </Link>
       <div className="mt-4">
         <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">

@@ -29,10 +29,10 @@ export default function RootLayout({ children }) {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/tvshows"
                 className="mr-5 hover:text-white cursor-pointer"
               >
-                About
+                Tv Shows
               </Link>
               <Link
                 href="/allmovies&series"
